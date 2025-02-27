@@ -8,7 +8,7 @@ export default {
   component: Button,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
-    layout: 'left',
+    layout: 'centered',
   },
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ['autodocs'],
@@ -21,17 +21,20 @@ export default {
 };
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
+
+//cada historia representa una variación del compoenente:
 export const Primary = {
   args: {
     primary: true,
     label: 'Button',
+    onClick: () => console.log('Click'),
   },
 };
 
 export const Secondary = {
   args: {
     label: 'Button',
-    onclick: () => console.log('Button clicked'),
+    onClick: () => console.log('Click')
   },
 };
 
@@ -51,7 +54,7 @@ export const Small = {
 
 export const Prueba = {
   args: {
-    primary: false,
-    label: "Button"
+    primary: true,
+    label: "Button",
   }
 };
